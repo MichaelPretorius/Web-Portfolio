@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Michael Pretorius</title>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,600,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+    <header id="home">
+        <div id="container">
+            <div id="name">
+                <h1>Hello, I'm <span class="highlight_red">Michael Pretorius</span>.<br>I'm a full-stack web developer.
+                </h1>
+            </div>
+            <a id="view_work" href="#about">Enter domain <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </header>
+
+    <div id="navbar_top"></div>
+    <nav id="navbar">
+        <div id="nav_burger">
+            <div id="burger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <div class="subtitle">
+            About
+            <div class="subtitle_line"></div>
+        </div>
+        <div id="personal">
+            <div id="image"></div>
+            <div id="description">
+                <h3>Who am I?</h3>
+                <p>I'm a passionate and hard working web developer with a love for creating new and aspiring websites
+                    that can make a change. <br><span class="highlight_red">Let's make a change!</span> </p>
+            </div>
+        </div>
+        <div class="group_head">
+            Skills
+            <div class="group_line"></div>
+        </div>
+        <div id="skills">
+            <div class="skill">
+                <div class="skill_pic" id="html_pic"></div>
+            </div>
+            <div class="skill">
+                <div class="skill_pic" id="css_pic"></div>
+            </div>
+            <div class="skill">
+                <div class="skill_pic" id="javascript_pic"></div>
+            </div>
+            <div class="skill">
+                <div class="skill_pic" id="node_pic"></div>
+            </div>
+        </div>
+        <div class="group_head">
+            Principles
+            <div class="group_line"></div>
+        </div>
+        <div id="principles">
+            <div class="principle">
+                <div class="prin_pic">
+                    <i class="fas fa-running"></i>
+                </div>
+                <div class="prin_label">
+                    <div class="prin_head">Fast</div>
+                    <div class="prin_desc">Lag free interaction and fast load times. #Priority1</div>
+                </div>
+            </div>
+            <div class="principle ">
+                <div class="prin_pic">
+                    <i class="far fa-lightbulb"></i>
+                </div>
+                <div class="prin_label">
+                    <div class="prin_head">Intuitive</div>
+                    <div class="prin_desc">Quick grasp and easy to use, intuitive UX/UI.</div>
+                </div>
+            </div>
+            <div class="principle">
+                <div class="prin_pic">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <div class="prin_label">
+                    <div class="prin_head">Responsive</div>
+                    <div class="prin_desc">Layouts gauranteed to work on any device, big or small.</div>
+                </div>
+            </div>
+            <div class="principle">
+                <div class="prin_pic">
+                    <i class="far fa-heart"></i>
+                </div>
+                <div class="prin_label">
+                    <div class="prin_head">Built with love.</div>
+                    <div class="prin_desc">Thought, care and effort is put into every design.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="subtitle">
+            Projects
+            <div class="subtitle_line"></div>
+        </div>
+        <div id="project_selectors">
+            <div class="project_selector selected" id="all">All</div>
+            <div class="project_selector" id="nodejs">Node.js</div>
+            <div class="project_selector" id="javascript">javascript</div>
+        </div>
+        <div id="project_photos">
+            <div class="project open nodejs" id="yelpcamp">
+                <div class="project_info">
+                    <p class="project_name">YelpCamp</p>
+                    <p class="project_lang">Node.js</p>
+                    <a>Learn More</a>
+                </div>
+                <div class="popup">
+                    <div class="popup_content">
+                        <img src="assets/Projects/yelpcamp.PNG" alt="yelpcamp">
+                        <a class="close">x</a>
+                        <h2>YelpCamp</h2>
+                        <hr>
+                        <p>Yelp Camp is a personal project that allows you to view campgrounds with a short description.
+                            Once you login or signup
+                            you can begin to create your own campgrounds that includes a title, image address and short
+                            description. You will also
+                            be able to leave a comment or edit a campground of yours. It was build with NodeJS and
+                            Express on back end and has Passport authorization. It is connected to a non-sql MongoDB
+                            database.</p>
+                        <div class="popup_buttons">
+                            <a href="https://michaelyelpcamp.herokuapp.com/" target="_blank">
+                                <div>View Site</div>
+                            </a>
+                            <a href="https://github.com/MichaelPretorius/YelpCamp" target="_blank">
+                                <div>View Github</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="project open javascript" id="colorgame">
+                <div class="project_info">
+                    <p class="project_name">ColorGame</p>
+                    <p class="project_lang">Javascript</p>
+                    <a>Learn More</a>
+                </div>
+                <div class="popup">
+                    <div class="popup_content">
+                        <img src="assets/Projects/colorgame.PNG" alt="colorgame">
+                        <a class="close">x</a>
+                        <h2>ColorGame</h2>
+                        <hr>
+                        <p>This is a simple color guessing game where you have to guess the given RGB (Red Green Blue
+                            ratio) color.
+                            The game was build with pure javascript. </p>
+                        <div class="popup_buttons">
+                            <a href="https://colorgame.michaelp.website/" target="_blank">
+                                <div>View Site</div>
+                            </a>
+                            <a href="https://github.com/MichaelPretorius/RGB-ColorGame" target="_blank">
+                                <div>View Github</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="project open javascript" id="patatap">
+                <div class="project_info">
+                    <p class="project_name">Patatap</p>
+                    <p class="project_lang">Javascript</p>
+                    <a>Learn More</a>
+                </div>
+                <div class="popup">
+                    <div class="popup_content">
+                        <img src="assets/Projects/patatap.PNG" alt="patatap">
+                        <a class="close">x</a>
+                        <h2>Patatap</h2>
+                        <hr>
+                        <p>Patatap is a visual sound kit based upon the patatap app. Build with pure javascript and two
+                            libraries: howlerjs and paperjs.</p>
+                        <div class="popup_buttons">
+                            <a href="https://patatap.michaelp.website/" target="_blank">
+                                <div>View Site</div>
+                            </a>
+                            <a href="https://github.com/MichaelPretorius/Patatap" target="_blank">
+                                <div>View Github</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="subtitle">
+            Contact
+            <div class="subtitle_line"></div>
+        </div>
+        <p class="highlight_blue">Have a question or want to work together?</p>
+        <!-- <div class="alert">Thanks you for your message. <br> I will get back to you ASAP!</div> -->
+        <form id="contact_form">
+            <div class="alert">Thank you for your message. <br> I will get back to you ASAP!</div>
+            <input class="form" type="text" placeholder="Name" id="fname" required>
+            <input class="form" type="email" placeholder="Email" id="femail" required>
+            <textarea class="form" id="fmessage" cols="30" rows="10" placeholder="Your Message" required></textarea>
+            <button id="button" type="submit">SUBMIT</button>
+        </form>
+    </section>
+
+    <footer>
+        <a href="#home" title="Home">
+            <div id="scroll_top">
+                <i class="fas fa-angle-double-up"></i>
+            </div>
+        </a>
+        <div id="footer_middle">
+            <div id="footer_links">
+                <a href="https://www.linkedin.com/in/michael-pretorius-05256518a/" target="_blank" title="My LinkedIn">
+                    <div class="footer_link">
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/michaelp.dev/?hl=en" target="_blank" title="My Instagram">
+                    <div class="footer_link">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </a>
+                <a href="https://github.com/MichaelPretorius" target="_blank">
+                    <div class="footer_link" title="My Github">
+                        <i class="fab fa-github"></i>
+                    </div>
+                </a>
+            </div>
+            <p>MICHAEL PRETORIUS <span class="highlight_red">&copy;2019</span></p>
+        </div>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-database.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>

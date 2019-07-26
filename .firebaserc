@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "michaelpwebsite"
+  },
+  "targets": {
+    "michaelpwebsite": {
+      "hosting": {
+        "portfolio": [
+          "michaelpwebsite"
+        ]
+      }
+    }
+  }
+}
