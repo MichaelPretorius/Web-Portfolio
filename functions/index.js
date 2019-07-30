@@ -1,8 +1,14 @@
 const functions = require('firebase-functions');
 const nodemailer = require('nodemailer');
+const rp = require("request-promise");
+const cors = require("cors")({ origin: true });
 
 const gmailEmail = functions.config().gmail.login;
 const gmailPassword = functions.config().gmail.pass;
+
+// ==============================
+// FUNCTION TO SEND EMAIL
+// ==============================
 
 const goMail = (name, email, message) => {
 
@@ -44,4 +50,41 @@ exports.onDataAdded = functions.database.ref('/messages/{sessionId}').onCreate((
 
     goMail(name, email, message);
     return null;
+});
+
+
+// ==================================
+// FUNCTION FOR reCAPTCHA
+// ==================================
+
+const secretKey = functions.config().recaptcha.secret;
+
+exports.checkRecaptcha = functions.https.onRequest((req, res) => {
+
+    const captcha = req.body.captcha;
+    console.log("recaptcha response", captcha);
+
+    return cors(req, res, () => {
+        rp({
+            method: 'POST',
+            uri: 'https://recaptcha.google.com/recaptcha/api/siteverify',
+            formData: {
+                secret: secretKey,
+                response: captcha
+            },
+            json: true
+        }).then(result => {
+            console.log("Recaptcha Result: ", result);
+            if (result.success) {
+                res.json({ success: true, msg: "Captcha Passed." });
+            }
+            else {
+                res.json({ success: false, msg: "Captcha Verification Failed." });
+            }
+        }).catch(reason => {
+            console.log("Recaptcha Request Failure: ", reason);
+            res.json({ success: false, msg: "Error occured with Verification." });
+        })
+    });
+
 });

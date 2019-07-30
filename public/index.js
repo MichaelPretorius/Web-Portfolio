@@ -1,12 +1,44 @@
+// Particles load for homepage
 particlesJS.load('home', 'particles.json');
 
-$(document).ready(function () {
+// =============================
+// RECAPTCHA CALLBACK functions
+// =============================
 
-    // Navbar burger
-    $("#burger").on("click", function () {
-        $("#navbar ul").toggleClass("open");
-        $("#burger").toggleClass("open");
+var button = document.getElementById("button");
+
+function recaptcha_callback(captcha) {
+
+    fetch("https://us-central1-michaelpwebsite.cloudfunctions.net/checkRecaptcha", {
+        method: "POST",
+        headers: {
+            "Accept": "application/json, text/plain, */*",
+            "Content-type": "application/json"
+        },
+        body: JSON.stringify({ captcha: captcha })
+    }).then((res) => res.json()).then((data) => {
+        if (data.success) {
+            button.removeAttribute("disabled");
+            button.style.cursor = "pointer";
+        } else {
+            console.log(data.msg + " Please try again!");
+        }
     });
+
+}
+
+function recaptcha_expire() {
+    button.setAttribute("disabled", true);
+    button.style.cursor = "not-allowed";
+    console.log("Captcha Expired! Please do it again.");
+}
+
+function recaptcha_error() {
+    console.log("An error occured with Captcha! Please try again.");
+}
+
+
+$(document).ready(function () {
 
     // ======================================
     // PROJECTS
@@ -39,6 +71,12 @@ $(document).ready(function () {
     // ====================================
     // NAVBAR 
     // ====================================
+
+    // Navbar burger
+    $("#burger").on("click", function () {
+        $("#navbar ul").toggleClass("open");
+        $("#burger").toggleClass("open");
+    });
 
     var move = function () {
 

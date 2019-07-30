@@ -539,7 +539,7 @@ CONTACT
 #contact_form {
     margin: 50px auto;
     max-width: 500px;
-    padding-bottom: 40px;
+    padding-bottom: 60px;
 }
 
 .form {
@@ -573,6 +573,7 @@ CONTACT
     text-align: center;
     border: 2px solid #fdfefe;
     transition: 0.5s;
+    cursor: not-allowed;
 }
 
 #button:hover {
@@ -580,6 +581,11 @@ CONTACT
     border: none;
     box-shadow: 1px 3px 5px rgba(30, 145, 153, 0.6);
 }
+
+.g-recaptcha {
+    float: left;
+}
+
 
 /* ===================================
 FOOTER
@@ -751,10 +757,6 @@ TABLET
         font-size: 14px;
         padding: 6px 12px;
     }
-    
-    #contact_form {
-        padding-bottom: 20px;
-    }
 
     .popup_content {
         width: 400px;
@@ -788,6 +790,19 @@ TABLET
 
     #contact_form {
         max-width: 90%;
+        padding-bottom: 0px;
+    }
+
+    #contact {
+        padding-bottom: 50px;
+    }
+
+    #button {
+        float: none;
+    }
+
+    .g-recaptcha {
+        float: none;
     }
 
     #nav_burger {
