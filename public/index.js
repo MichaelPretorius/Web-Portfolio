@@ -47,11 +47,47 @@ $(document).ready(function () {
     // Open and Close projects
     $(".project a").on("click", function () {
         $(this).parent().next().addClass("open");
+
+        //Show next&prev buttons if more than 1 pic
+        var nextImg = $(this).parent().next().find("img").next("img");
+        if (nextImg.length) {
+            $(this).parent().next().find(".prev").addClass("open");
+            $(this).parent().next().find(".next").addClass("open");
+        }
     });
 
     $(".close").on("click", function () {
         $(".popup").removeClass("open");
     });
+
+
+    //Project Popup Images Slider
+    $(".next").on("click", function () {
+        var currentImg = $(this).parent().find(".active");
+        var nextImg = currentImg.next();
+
+        if (nextImg.length) {
+            currentImg.removeClass("active");
+            nextImg.addClass("active");
+        } else {
+            currentImg.removeClass("active");
+            $(".slider_inner img:first-child").addClass("active");
+        }
+    });
+
+    $(".prev").on("click", function () {
+        var currentImg = $(this).parent().find(".active");
+        var prevImg = currentImg.prev();
+
+        if (prevImg.length) {
+            currentImg.removeClass("active");
+            prevImg.addClass("active");
+        } else {
+            currentImg.removeClass("active");
+            $(".slider_inner img:last-child").addClass("active");
+        }
+    });
+
 
     // Project Selectors
     $(".project_selector").on("click", function () {
