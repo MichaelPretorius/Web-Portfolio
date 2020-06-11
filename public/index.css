@@ -627,7 +627,6 @@ CONTACT
     text-align: center;
     border: 2px solid #fdfefe;
     transition: 0.5s;
-    cursor: not-allowed;
 }
 
 #button:hover {
