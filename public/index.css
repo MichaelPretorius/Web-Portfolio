@@ -283,6 +283,21 @@ ABOUT
     background-size: 100%;
 }
 
+#react_pic {
+    background: url(assets/react.png) no-repeat center;
+    background-size: 100% auto;
+}
+
+#python_pic {
+    background: url(assets/python.png) no-repeat center;
+    background-size: auto 100%;
+}
+
+#wordpress_pic {
+    background: url(assets/wordpress.png) no-repeat center;
+    background-size: 100%;
+}
+
 #principles {
     display: flex;
     flex-wrap: wrap;
@@ -361,18 +376,28 @@ PROJECTS
     display: block;
 }
 
+.project#envel {
+    background: url(assets/Projects/envel.png) no-repeat center;
+    background-size: cover;
+}
+
 .project#yelpcamp {
-    background: url(assets/Projects/yelpcamp.PNG) no-repeat 0 0;
+    background: url(assets/Projects/yelpcamp.png) no-repeat 0 0;
     background-size: cover;
 }
 
-.project#colorgame {
-    background: url(assets/Projects/colorgame.PNG) no-repeat center;
+.project#forum {
+    background: url(assets/Projects/forum.png) no-repeat center;
     background-size: cover;
 }
 
-.project#patatap {
-    background: url(assets/Projects/patatap.PNG) no-repeat center;
+.project#clothing {
+    background: url(assets/Projects/crwn-clothing.png) no-repeat center;
+    background-size: cover;
+}
+
+.project#blog {
+    background: url(assets/Projects/blog.png) no-repeat center;
     background-size: cover;
 }
 
@@ -386,7 +411,7 @@ PROJECTS
 
 .project_info:hover {
     opacity: 1;
-    background: #869ba5;
+    background: rgba(134, 155, 165, 0.9);
 }
 
 .project_name {

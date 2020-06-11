@@ -6,6 +6,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
+  <!-- SEO optimization -->
+  <link rel="canonical" href="https://www.michaelpretorius.com" />
+  <!-- Facebook -->
+  <meta property="og:site_name" content="Michael Pretorius" />
+  <meta property="og:title" content="Michael Pretorius" />
+  <meta property="og:url" content="https://www.michaelpretorius.com" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="Michael Pretorius - Software developer" />
+  <meta property="og:image" content="assets/logo.png" />
+  <!-- Twitter -->
+  <meta name="twitter:title" content="Michael Pretorius" />
+  <meta name="twitter:image" content="assets/logo.png" />
+  <meta name="twitter:url" content="https://www.michaelpretorius.com" />
+  <meta name="twitter:description" content="Michael Pretorius - Software developer" />
+  <!-- General -->
+  <meta name="description" content="Michael Pretorius - Software developer" />
+  <meta name="keywords"
+    content="Michael Pretorius, Web developer, Software developer, Freelancer, Web develop, React, JavaScript, Python" />
+
   <title>Michael Pretorius</title>
 
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
@@ -31,6 +50,7 @@
 
   <div id="navbar_top"></div>
   <nav id="navbar">
+    <img src="assets/design.png" style="height: 45px; float: left; margin-left: 15px;" />
     <div id="nav_burger">
       <div id="burger">
         <div></div>
@@ -75,6 +95,15 @@
       </div>
       <div class="skill">
         <div class="skill_pic" id="node_pic"></div>
+      </div>
+      <div class="skill">
+        <div class="skill_pic" id="react_pic"></div>
+      </div>
+      <div class="skill">
+        <div class="skill_pic" id="python_pic"></div>
+      </div>
+      <div class="skill">
+        <div class="skill_pic" id="wordpress_pic"></div>
       </div>
     </div>
     <div class="group_head">
@@ -126,12 +155,36 @@
       Projects
       <div class="subtitle_line"></div>
     </div>
-    <div id="project_selectors">
-      <div class="project_selector selected" id="all">All</div>
-      <div class="project_selector" id="nodejs">Node.js</div>
-      <div class="project_selector" id="javascript">javascript</div>
-    </div>
     <div id="project_photos">
+      <div class="project open javascript" id="envel">
+        <div class="project_info">
+          <p class="project_name">Envel</p>
+          <p class="project_lang">React</p>
+          <a>Learn More</a>
+        </div>
+        <div class="popup">
+          <div class="popup_content">
+            <div class="img_container">
+              <div class="prev"><i class="fas fa-angle-left"></i></div>
+              <div class="slider_inner">
+                <img src="assets/Projects/envel.png" alt="envel" class="active">
+                <img src="assets/Projects/envel1.png" alt="envel1">
+                <img src="assets/Projects/envel2.png" alt="envel2">
+              </div>
+              <div class="next"><i class="fas fa-angle-right"></i></div>
+            </div>
+            <a class="close">x</a>
+            <h2>Envel</h2>
+            <hr>
+            <p>Envel is a new bank based in the US that is planning on revolutionizing Mobile Banking with integrated Artificial Intelligence to make banking easier and care free: "Envel will take care of your savings and build your capital". I developed the site with React and integrated a calculator to give you a rough estimate of how much Envel can help increase your capital in a year.</p>
+            <div class="popup_buttons">
+              <a href="https://www.envel.ai/" target="_blank">
+                <div>View Site</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="project open nodejs" id="yelpcamp">
         <div class="project_info">
           <p class="project_name">YelpCamp</p>
@@ -144,7 +197,7 @@
               <div class="prev"><i class="fas fa-angle-left"></i></div>
               <div class="slider_inner">
                 <img src="assets/Projects/yelpcamp.PNG" alt="YelpCamp" class="active">
-                <img src="assets/Projects/yelpcamp1.PNG" alt="YelpCamp">
+                <img src="assets/Projects/yelpcamp1.PNG" alt="YelpCamp1">
               </div>
               <div class="next"><i class="fas fa-angle-right"></i></div>
             </div>
@@ -153,7 +206,7 @@
             <hr>
             <p>Yelp Camp is a personal project that allows you to view campgrounds with a
               short description.
-              Once you login or signup
+              Once you signup
               you can begin to create your own campgrounds that includes a title, image
               address and short
               description. You will also
@@ -173,10 +226,10 @@
           </div>
         </div>
       </div>
-      <div class="project open javascript" id="colorgame">
+      <div class="project open javascript" id="forum">
         <div class="project_info">
-          <p class="project_name">ColorGame</p>
-          <p class="project_lang">Javascript</p>
+          <p class="project_name">Envel Forum</p>
+          <p class="project_lang">Discourse/JavaScript</p>
           <a>Learn More</a>
         </div>
         <div class="popup">
@@ -184,32 +237,59 @@
             <div class="img_container">
               <div class="prev"><i class="fas fa-angle-left"></i></div>
               <div class="slider_inner">
-                <img src="assets/Projects/colorgame.PNG" alt="colorgame" class="active">
+                <img src="assets/Projects/forum1.png" alt="envel forum" class="active">
+                <img src="assets/Projects/forum.png" alt="envel forum">
               </div>
               <div class="next"><i class="fas fa-angle-right"></i></div>
             </div>
             <a class="close">x</a>
-            <h2>ColorGame</h2>
+            <h2>Envel Forum</h2>
             <hr>
-            <p>This is a simple color guessing game where you have to guess the given RGB (Red
-              Green Blue
-              ratio) color.
-              The game was build with pure javascript. </p>
+            <p>A forum site for the Envel Community to connect, discuss new ideas and share thoughts. I developed the site using the Discourse Container with custom styling and functionality. Also added a light-dark switch and theme, for those who love the dark. Currently it is a private site, by invite only, but will go public soon.</p>
             <div class="popup_buttons">
-              <a href="https://colorgame.michaelp.website/" target="_blank">
+              <a href="https://community.envel.ai/" target="_blank">
                 <div>View Site</div>
               </a>
-              <a href="https://github.com/MichaelPretorius/RGB-ColorGame" target="_blank">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="project open javascript" id="clothing">
+        <div class="project_info">
+          <p class="project_name">Crwn Clothing</p>
+          <p class="project_lang">React/Node.js</p>
+          <a>Learn More</a>
+        </div>
+        <div class="popup">
+          <div class="popup_content">
+            <div class="img_container">
+              <div class="prev"><i class="fas fa-angle-left"></i></div>
+              <div class="slider_inner">
+                <img src="assets/Projects/crwn-clothing.png" alt="crown clothing" class="active">
+                <img src="assets/Projects/crwn-clothing1.png" alt="crown clothing">
+                <img src="assets/Projects/crwn-clothing2.png" alt="crown clothing">
+              </div>
+              <div class="next"><i class="fas fa-angle-right"></i></div>
+            </div>
+            <a class="close">x</a>
+            <h2>Crwn Clothing</h2>
+            <hr>
+            <p>Crwn Clothing a is personal project to quickly demonstrate a fast and efficient e-commerce site build with React and Node.js and connected to a Mongo Database. You can browse and add items to your cart and I also integrated a payment system (Stripe) upon checkout. The site is also a PWA (Progressive Web App) meaning you can install it on your device and use it like a native app.</p>
+            <div class="popup_buttons">
+              <a href="https://michaelcrwn-clothing.herokuapp.com/" target="_blank">
+                <div>View Site</div>
+              </a>
+              <a href="https://github.com/MichaelPretorius/crwn-clothing" target="_blank">
                 <div>View Github</div>
               </a>
             </div>
           </div>
         </div>
       </div>
-      <div class="project open javascript" id="patatap">
+      <div class="project open javascript" id="blog">
         <div class="project_info">
-          <p class="project_name">Patatap</p>
-          <p class="project_lang">Javascript</p>
+          <p class="project_name">Envel Blog</p>
+          <p class="project_lang">WordPress</p>
           <a>Learn More</a>
         </div>
         <div class="popup">
@@ -217,22 +297,18 @@
             <div class="img_container">
               <div class="prev"><i class="fas fa-angle-left"></i></div>
               <div class="slider_inner">
-                <img src="assets/Projects/patatap.PNG" alt="patatap" class="active">
+                <img src="assets/Projects/blog.png" alt="envel blog" class="active">
+                <img src="assets/Projects/blog1.png" alt="envel blog">
               </div>
               <div class="next"><i class="fas fa-angle-right"></i></div>
             </div>
             <a class="close">x</a>
-            <h2>Patatap</h2>
+            <h2>Envel Blog</h2>
             <hr>
-            <p>Patatap is a visual sound kit based upon the patatap app. Build with pure
-              javascript and two
-              libraries: howlerjs and paperjs.</p>
+            <p>A simple blog site for Envel. I developed the site using WordPress and custom styling.</p>
             <div class="popup_buttons">
-              <a href="https://patatap.michaelp.website/" target="_blank">
+              <a href="https://blog.envelengers.com/" target="_blank">
                 <div>View Site</div>
-              </a>
-              <a href="https://github.com/MichaelPretorius/Patatap" target="_blank">
-                <div>View Github</div>
               </a>
             </div>
           </div>
@@ -269,18 +345,13 @@
             <i class="fab fa-linkedin-in"></i>
           </div>
         </a>
-        <a href="https://www.instagram.com/michaelp.dev/?hl=en" target="_blank" title="My Instagram">
-          <div class="footer_link">
-            <i class="fab fa-instagram"></i>
-          </div>
-        </a>
         <a href="https://github.com/MichaelPretorius" target="_blank">
           <div class="footer_link" title="My Github">
             <i class="fab fa-github"></i>
           </div>
         </a>
       </div>
-      <p>MICHAEL PRETORIUS <span class="highlight_red">&copy;2019</span></p>
+      <p>MICHAEL PRETORIUS <span class="highlight_red">&copy;2020</span></p>
     </div>
   </footer>
 

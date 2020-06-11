@@ -51,22 +51,6 @@ $(document).ready(function () {
         }
     });
 
-
-    // Project Selectors
-    $(".project_selector").on("click", function () {
-        var lang = $(this).attr("id");
-
-        $(".project_selector").removeClass("selected");
-        $(this).addClass("selected");
-
-        if (lang === "all") {
-            $(".project").addClass("open");
-        } else {
-            $(".project").removeClass("open");
-            $(".project." + lang).addClass("open");
-        }
-    });
-
     // ====================================
     // NAVBAR 
     // ====================================
