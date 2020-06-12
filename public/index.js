@@ -4,6 +4,41 @@ particlesJS.load('home', 'particles.json');
 $(document).ready(function () {
 
     // ======================================
+    // LANDING TYPE TEXT
+    // ======================================
+    const text1 = document.getElementById("text1");
+    const txt1 = "Hello, I'm ";
+    let a = 0;
+
+    const text2 = document.getElementById('text2');
+    const txt2 = "Michael Pretorius";
+    let b = 0;
+
+    const text3 = document.getElementById('text3');
+    const txt3 = "I'm a full-stack web developer";
+    let c = 0;
+
+    const speed = 100;
+
+    function typeWriter() {
+      if (a < txt1.length) {
+        text1.innerHTML += txt1.charAt(a);
+				a++;
+        setTimeout(typeWriter, speed);
+			} else if (b < txt2.length) {
+				text2.innerHTML += txt2.charAt(b);
+				b++;
+				setTimeout(typeWriter, speed);
+			} else if (c < txt3.length) {
+				text3.innerHTML += txt3.charAt(c);
+				c++;
+				setTimeout(typeWriter, speed);
+			}
+    }
+
+    setTimeout(typeWriter, 1000)
+
+    // ======================================
     // PROJECTS
     // ======================================
 

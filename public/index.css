@@ -33,7 +33,7 @@ HOME
     height: 100%;
     margin-bottom: 0;
     display: flex;
-    flex-flow: column;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -41,6 +41,7 @@ HOME
 #container {
     margin:0;
     padding: 0;
+    width: 100%;
     position: absolute;
     box-sizing: border-box;
 }
@@ -56,6 +57,24 @@ HOME
     font-weight: 500;
 }
 
+.typer1 {
+  color: #ff3d00;
+  text-shadow: 1px 1px 4px #ff3d00;
+  animation: typer 0.6s linear 0s 7 forwards;
+}
+
+.typer2 {
+  color: #ff3d00;
+  text-shadow: 1px 1px 4px #ff3d00;
+  animation: typer 0.7s linear 4s 6 both;
+}
+
+@keyframes typer {
+  0% {opacity: 0;}
+  50% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
 #view_work {
     border: 2px solid #ffffff;
     font-size: 25px;
@@ -63,7 +82,7 @@ HOME
     width: 205px;
     color: #ffffff;
     box-sizing: border-box;
-    transition: 0.4s;
+    transition: 0.4s;    
 }
 
 #view_work:hover {
